@@ -1,0 +1,34 @@
+services:
+  api:
+    build:
+      context: backend
+    ports:
+      - 5000:5000
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - my_network
+
+  postgres:
+    image: 'postgres:13'
+    restart: always
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./backend/.env
+    healthcheck:
+      test: ["CMD", "pg_isready","-d", "play"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - 'postgres_data:/var/lib/postgresql/data'
+    networks:
+      - my_network
+
+volumes:
+  postgres_data:
+networks:
+  my_network:
+

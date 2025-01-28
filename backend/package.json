@@ -1,0 +1,35 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/app.js",
+    "seed": "node dist/config/seed.js",
+    "db-push": "npx prisma db push",
+    "migrate-dev": "npx prisma migrate dev",
+    "migrate-reset": "npx prisma migrate reset",
+    "migrate-deploy": "npx prisma migrate deploy"
+  },
+  "_moduleAliases": {
+    "@root": "dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.10",
+    "prisma": "^6.0.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.4.0",
+    "@prisma/client": "^6.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "module-alias": "^2.2.3"
+  }
+}
