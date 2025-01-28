@@ -4,8 +4,8 @@
 
 Duplicate the .env.local file and rename it to `.env`  
 
-`cd ./backend && \  
-cp .env.local .env`  
+`cd ./backend && \`  
+`cp .env.local .env`  
 
 In your new `.env` file, insert your credentials in the following variables:  
 `POSTGRES_USER=  
