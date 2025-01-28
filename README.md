@@ -18,4 +18,4 @@ Once the backend is set up, let's install the frontend dependencies on your loca
 `cd ./frontent && npm i`  
 
 Finally, run the project:  
-`npm run`
+`npm start`
