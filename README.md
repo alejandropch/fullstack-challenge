@@ -1,9 +1,18 @@
 # FullStack Challenge
 
-## How to run the thing?
+## How to run the thing?  
 
-In the root project let's run:  
-`docker-compose up --build` 
+Duplicate the .env.local file and rename it to `.env`  
+
+`cd ./backend && \  
+cp .env.local .env`  
+
+In your new `.env` file, insert your credentials in the following variables:  
+`POSTGRES_USER=  
+POSTGRES_PASSWORD=`  
+
+Now in the root project, let's run:  
+`docker-compose up --build`  
 
 Then access the api container by:  
 `docker exec -it <container-id> bash`  
